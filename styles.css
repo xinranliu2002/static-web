@@ -1,0 +1,654 @@
+@import url("https://fonts.googleapis.com/css?family=Merriweather:300,700,300italic,700italic|Source+Sans+Pro:900");
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Merriweather';
+    background-color: #1E1727;
+
+    /*color: #ecf0f1; */
+    /*color: #ccd6f6;*/
+    color: #cdd9db;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    align-items: center;
+    padding: 1em;
+    position: fixed;
+    z-index: 1000;
+    transition: top 1s; 
+    top: 0;
+    right: 0;
+    background: 12101b(0,0,0,0.5);
+}
+
+.header-hidden {
+    top: -100px;
+}
+
+
+
+
+nav ul {
+    list-style: none;
+    display: flex;
+    padding: 0; /* Remove default padding */
+    margin-top: 20px; /* Align with the header */
+}
+
+nav ul li {
+    margin-right: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ecf0f1;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #64ffda;
+}
+
+nav .section-number {
+    color: #64ffda;
+    margin-right: 3px; 
+}
+
+.resume-li {
+    margin-left: auto; /* This pushes the resume button to the right */
+}
+
+/*
+.btn-blue-tr {
+    min-width: 130px;
+    position: relative;
+    display: inline-block;
+  
+    text-align: center;
+    text-transform: uppercase; 
+  
+    padding: 15px;
+    margin: 30px 25px;
+  
+    font-size: 100% + 40%;
+    font-weight: 600;
+  
+    color: #ecf0f1;
+  
+    transition: 0.5s;
+  }
+  
+
+  .btn-blue-tr { background-color: #3498db; }
+  
+ 
+  .btn-blue-tr:hover {
+    box-shadow: 7px 7px green, -7px -7px red;
+    cursor: pointer;
+    &::before {
+      border: 0px ;
+    }
+  }
+  
+*/
+
+.resume-button {
+    text-decoration: none;
+    padding: 0.5em 1em;
+    border: 1px solid #64ffda;
+    color: #64ffda;
+    transition: background-color 0.3s ease;
+    border-radius: 3px;
+}
+
+.resume-button:hover {
+    background-color: #64ffda;
+    color: #0a192f;
+}
+
+
+.intro {
+    width: 80%; /* 3/5 of the parent container's width */
+    margin: 0 auto; /* Center the section horizontally */
+    padding: 200px 20px 120px 100px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: left; 
+    text-align: left;
+}
+
+/* Text Styles */
+.intro .intro-text p, .intro .intro-text h1, .intro .intro-text h2 {
+    margin: 20px 0; /* Provide some space between the text elements */
+}
+
+.intro .intro-text p {
+    color: #64ffda; /* Light teal color */
+    font-size: 1.2rem; 
+}
+
+.intro .intro-text h1 {
+    color: #ecf0f1;
+    font-size: 4.5rem;
+    margin: 0.4rem 0;
+}
+
+.intro .intro-text h2 {
+    color: #cdd9db; 
+    font-size: 2.5rem; 
+    margin: 0.5rem 0;
+}
+
+.intro p:not(.intro-text p) {
+    width: 75%;
+    color: #cdd9db; 
+    margin-bottom: 1.5rem; /* Space below the paragraph */
+}
+
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .intro {
+        width: 90%; /* Wider on small screens for better readability */
+        padding: 20px; /* Adjust padding as needed */
+    }
+    
+    .intro .hero-text h1 {
+        font-size: 3rem; /* Smaller font size for the name */
+    }
+    
+    .intro .hero-text h2 {
+        font-size: 1.5rem; /* Smaller font size for the subtitle */
+    }
+}
+
+
+
+/* * About Me section !!!*/
+
+.about-me {
+    width: 60%; 
+    margin: 0 15%; 
+    padding: 200px 0px 100px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: left; 
+    text-align: left; 
+}
+
+.content {
+    max-width: 600px;
+}
+
+.section-header1 {
+    padding: 20px 0; 
+    margin: 0; 
+}
+
+.section-header1 h2 {
+    color: #ecf0f1; 
+    font-size: 24px; 
+    font-weight: 600; 
+    margin: 0; 
+    position: relative; 
+    display: inline-block; 
+}
+
+.section-header1 .section-number {
+    color: #64ffda; 
+    margin-right: 10px; /* Space between the number and 'About Me' */
+}
+
+.section-header1 h2::after {
+    content: ''; 
+    display: block; 
+    height: 1px; 
+    width: calc(0.9*(600px - 210px)); /* Line width relative to the h2 element */
+    background-color: #ecf0f1; 
+    position: absolute; 
+    bottom: 50%; 
+    left: 210px;
+    right: 0px; 
+    transform: translateY(50%); 
+}
+
+/* Button Styles */
+.about-me .course-button {
+    width: 180px;
+    text-decoration: none;
+    padding: 0.5em 1em;
+    background-color: #1E1727;
+    border: 1px solid #64ffda;
+    color: #64ffda;
+    transition: background-color 0.3s ease;
+    border-radius: 3px;
+}
+
+.about-me .course-button:hover {
+    background-color: #64ffda;
+    color: #1E1727;
+}
+
+.content p {
+    margin-bottom: 20px;
+}
+
+.content .technologies ul {
+    list-style: none;
+    padding: 0;
+}
+
+.content .technologies li {
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: 20px;
+    background: rgba(100, 255, 218, 0.1);
+    color: #64ffda;
+    padding: 5px 10px;
+}
+
+.profile-picture {
+    margin-left: 50px;
+}
+
+.profile-picture img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transform: rotate(-10deg);
+    transition: transform 0.3s ease-in-out;
+}
+
+.profile-picture img:hover {
+    transform: rotate(0deg);
+}
+
+
+
+/* Work section !!!*/
+
+.experience-section {
+    width: 75%; 
+    margin: 0 25%; 
+    padding: 100px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.section-header2 {
+    width: 100%; 
+    padding: 20px 0;
+    margin-bottom: 20px;
+}
+
+.section-header2 h2 {
+    color: #ecf0f1; 
+    font-size: 24px; 
+    font-weight: 600; 
+    margin: 0;
+    position: relative; 
+    display: inline-block; 
+}
+
+.section-header2 .section-number {
+    color: #64ffda; 
+    margin-right: 10px; 
+}
+
+.section-header2 h2::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: calc(0.9*(600px - 290px)); 
+    background-color: #ecf0f1; 
+    position: absolute; 
+    bottom: 50%; 
+    left: 290px;
+    right: 0px; 
+    transform: translateY(50%);
+}
+
+.company-container {
+    display: flex;
+    flex-direction: row; /* ligns list and details in a row */
+}
+
+.company-list {
+    flex: 1;
+    max-width: 130px;
+}
+
+.company-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.company-list ul li {
+    cursor: pointer;
+    padding: 10px;
+    border-left: 3px rgba(107, 167, 150, 0.5); /* Default state */
+    transition: all 0.3s ease;
+    max-width: 50px;
+}
+
+.company-list ul li.active {
+    border-left: 2px solid #64ffda; /* Active or hover state */
+    color: #64ffda;
+}
+
+.company-list ul li:hover {
+    background-color: #343e51;
+    color: #64ffda;
+}
+
+.company-details {
+    flex: 3;
+    max-width: 60%;
+    display: none;
+}
+
+.company-details p{
+
+}
+
+.company-details.active {
+    display: block;
+} 
+
+.company-details ul li{
+    list-style: none; 
+    position: relative; 
+    margin-left: 0px;
+    text-indent: -25px; 
+}
+
+.company-details ul li::before{
+    content: ''; 
+    display: inline-block; 
+    width: 5px; 
+    height: 5px; 
+    border: 2px solid #64ffda;
+    border-radius: 50%; 
+    margin-right: 16px; /* Space between the bullet point and the text */
+    vertical-align: middle; 
+  }
+
+.company-name {
+    color: #64ffda; 
+    text-decoration: none;
+  }
+
+.time-period {
+    font-size: 18px; 
+    margin-top: 5px; 
+}
+
+
+/** Project section!! */
+.projects {
+    width: 80%; 
+    margin: 0 15%; 
+    padding: 40px 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: left; 
+    text-align: left; 
+}
+
+.section-header3 {
+    padding: 20px 0; 
+    margin: 0; 
+}
+
+.section-header3 h2 {
+    color: #ecf0f1; 
+    font-size: 24px; 
+    font-weight: 600; 
+    margin: 0; 
+    position: relative; 
+    display: inline-block; 
+}
+
+.section-header3 .section-number {
+    color: #64ffda; 
+    margin-right: 10px; /* space between the number and 'About Me' */
+}
+
+.section-header3 h2::after {
+    content: ''; 
+    display: block; 
+    height: 1px; 
+    width: calc(0.9*(600px - 290px));
+    background-color: #ecf0f1; 
+    position: absolute; /* Positioning relative to the h2 */
+    bottom: 50%; 
+    left: 290px;
+    right: 0px; 
+    transform: translateY(50%); 
+}
+
+.references {
+    color: #64ffda;
+}
+
+.project1, .project3 {
+    width: 90%; /* 3/5 of the parent container's width */
+    margin: 0; 
+    padding: 40px 0px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    align-items: center;
+} 
+
+.project1 img, .project3 img {
+    width: 55%; 
+    height: 70%; 
+    border-radius: 5px;
+    transition: 0.3s ease;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -webkit-transition: all 1s ease;
+    z-index: 5;
+}
+
+.project1 img:hover, .project3 img:hover{
+    filter: none;
+    transition: 1s ease;
+}
+
+
+
+.project1-content, .project3-content {
+    position: absolute;
+    left: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    text-align: right;
+    justify-content: flex-end;
+}
+
+.project1-description, .project3-description  {
+    background-color: #2f233f; 
+    padding: 5px 20px;
+    align-self: flex-end; /* Align  item to the right */
+    max-width: 55%; 
+    border-radius: 5px;
+    z-index: 15;
+}
+
+
+.project1 h2, .project3 h2 {
+    color: #ecf0f1;
+}
+
+.project1 ul, .project3 ul{
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+}
+
+.project1 ul li, .project3 ul li {
+    display: inline-block;
+    margin-right: 10px; /* Space between items */
+    color: #64ffda;
+}
+
+.project1 a, .project3 a {
+    color: #64ffda;
+    text-decoration: none; /* no underline */
+}
+
+
+.project2, .project4 {
+    width: 90%; 
+    margin: 0; 
+    padding: 40px 0px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    position: relative;
+}
+
+.project2 img, .project4 img{
+    width: 55%; 
+    margin-left: auto;
+    border-radius: 5px;
+    transition: 0.3s ease;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -webkit-transition: all 1s ease;
+    z-index: 5;
+}
+
+.project2 img:hover, .project4 img:hover{
+    filter: none;
+    transition: 1s ease;
+}
+
+.project2-content, .project4-content{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    text-align: left;
+    justify-content: flex-end;
+}
+
+.project2-description, .project4-description{
+    background-color: #2f233f; 
+    padding: 5px 20px;
+    align-self: flex-start; /* Align  item to the right */
+    max-width: 45%; 
+    border-radius: 5px;
+    z-index: 15;
+}
+
+
+.project2 h2, .project4 h2 {
+    color: #ecf0f1;
+}
+
+.project2 ul, .project4 ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0;
+}
+
+.project2 ul li, .project4 ul li{
+    display: inline-block;
+    margin-right: 10px; /* Space between items */
+    color: #64ffda;
+}
+
+.project2 a, .project4 a{
+    color: #64ffda;
+    text-decoration: none; /* No underline */
+}
+
+
+/** Contact me section */
+.contact-section {
+    color: #ecf0f1; 
+    padding: 100px 0; /* top and bottom padding */
+    text-align: center; 
+}
+
+.container {
+    max-width: 800px; 
+    margin: 0 auto; /* Center the container */
+}
+
+.contact-section h4 {
+    color: #64ffda; /* Accent color */
+    margin-bottom: 20px; /* Space below the subtitle */
+}
+
+.contact-section h1 {
+    color: #ecf0f1; 
+    margin-bottom: 24px; /* Space below the title */
+}
+
+.contact-section p {
+    color: #ccd6f6; 
+    margin-bottom: 40px; /* Space below the paragraph */
+}
+
+.say-hello-btn {
+    background: transparent;
+    border: 1px solid #64ffda;
+    color: #64ffda; 
+    padding: 12px 24px;
+    text-decoration: none; 
+    font-weight: bold;
+    border-radius: 4px; 
+    transition: all 0.3s ease-in-out; /* transition for hover effects */
+}
+
+.say-hello-btn:hover {
+    background: #64ffda; 
+    color: #0a192f; 
+    cursor: pointer; 
+}
+
+footer {
+    text-align: center;
+}
+
+
+.built {
+    text-align: center;
+    color: #ccd6f6;
+}
+
+.credit {
+    text-align: center;
+    color: #ccd6f6;
+}
+
+
+/* Additional responsive styles as needed */
+@media (max-width: 768px) {
+    .projects {
+        flex-direction: column;
+    }
+}

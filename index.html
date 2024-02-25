@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about"><span class="section-number">01.</span> About</a></li>
+                <li><a href="#experience"><span class="section-number">02.</span> Experience</a></li>
+                <li><a href="#projects"><span class="section-number">03.</span> Projects</a></li>
+                <li><a href="#contact"><span class="section-number">04.</span> Contact</a></li>
+                <li class="resume-li"><a href="static/resume.pdf" class="resume-button" target="_blank">Resume</a></li>
+            </ul>
+            <!--<div class="btn-blue-tr">pirmary</div> -->
+        </nav>
+    </header>
+    <main>
+        <section class="intro">
+            <div class="intro-text">
+                <p>Hi, my name is</p>
+                <h1>Xinran Liu.</h1>
+                <h2>Mathematics, Data, and Cinematograph</h2>
+            </div>
+            <h2>are where my interests lie in.</h2>
+        </section>
+
+        <section class="about-me" id="about">
+            <div class="content">
+                <div class="section-header1">
+                    <h2><span class="section-number">01.</span> About Me</h2>
+                </div>
+
+                <p> I’m a film enthusiast currently pursuing a B.A. in Mathematics at Reed College, located in the mystic city of Portland, Oregon.
+                    Tracing back my footsteps, my journey starts at Beijing, China, where I spent my childhood and teenage years with my family.</p>
+                <p> During my undergraduate studies, I've had the opportunity to collaborate with the most wonder people, conducting research in quantum computation, cryptography, and trade dynamics.
+                    I'm currently studying the anti-concentration property of quantum random circuit sampling for my year-long thesis project.
+                </p>
+                <p>I've also focused on building my applied skills in programming. With a wealth of experience in data-centric areas,
+                    I'm interested in the potential to enhance research narrative and extract insights through data analysis and visualizations.</p>
+                <p>Besides being a student, I am also a member of the Big Mouth Society, a local at Por and freelance photographer. I would never stop, as I ambition to explore the world to its fullest extent.</p>
+                <button class="course-button">Check out my art works!</button>
+            </div>
+            <div class="profile-picture">
+                <img src="brittany.jpg" alt="Brittany">
+            </div>
+        </section>
+
+        <section class="experience-section" id="experience">
+            <div class="section-header2">
+                <h2><span class="section-number">02.</span> Work Experiences</h2>
+            </div>
+            <div class = "company-container">
+                <div class="company-list">
+                    <ul>
+                      <li class="company active" data-company="cicc">CICC</li>
+                      <li class="company" data-company="reed">REED</li>
+                    </ul>
+                </div>
+    
+                 <div class="company-details" id="cicc">
+                    <h2>IPO Department Intern <a class="company-name" href="https://en.cicc.com/" target="_blank">@ CICC</a></h2>
+                    <p class="time-period">June 2023 – Aug 2023</p>
+                    <ul>
+                        <li>Compiled Excel sheet with 5k datapoint to collect and analyze financial and operational statistics of 12 publicly-listed companies in the Big Data Platform sector</li>
+                        <li>Advised client on prospectus crafting and identified selling points in both technical and financial aspects by studying client’s software & hardware technologies and comparing key statistics with collected companies</li>
+                        <li>Presented 3 comprehensive case studies on recent IPO rejections and withdrawals of similar companies</li>
+                        <li>Facilitated over 10 due diligence interviews w/client senior execs in Tech, HR, etc. and followed up on ambiguous or unreconciled data. Produced over 80 pages minutes</li>
+                    </ul>
+                </div>
+                <div class="company-details" id="reed">
+                    <h2>Undergrad Research Assistant <a class="company-name" href="https://www.reed.edu/economics/opportunities.html#research" target="_blank">@ Reed</a></h2>
+                    <p class="time-period">May 2022 – Oct 2022</p>
+                    <ul>
+                        <li>Collected, wrangled, and analyzed 15k datapoint statistics from open resource to investigate the correlation between migration measures, tariff, and average wage in China from 1998 to 2021 using R and MS Excel</li>
+                        <li>Generated two interactive geospatial heatmaps using R shiny and 10+ visualizations to demonstrate the correlations between provincial migration and other factors</li>
+                        <li>Drew insights from the empirical analysis and adapted the key assumptions and parameters of the economic model of China’s provincial migration in response to trade liberalizations</li>
+                        <li>Conducted comprehensive literature review in economic journals AEJ/AER, and wrote out data descriptions by investigating the application range and relevance of the commonly used data sources</li>
+                    </ul>
+                </div>
+            </div>
+            
+  
+        </section>
+
+        <section class="projects" id="projects">
+            <div class="section-header3">
+                <h2><span class="section-number">03.</span> Featured Projects</h2>
+            </div>
+
+            <div class="project1">
+                <img src="images/thesis.png" alt="Project Image">
+                <div class="project1-content">
+                    <h2>Independent Research</h2>
+                    <div class = "project1-description">
+                        <p>A senior thesis project in which I conduct independent research
+                             on extending the study of <a class="references" href="https://arxiv.org/abs/2211.03999" target="_blank"> polynomial time classical algorithm</a> for simulating 
+                             output of Random Circuit Sampling. </p>
+                        <p>The goal is to loosen the anti-concentration assumption 
+                            for a larger application range, i.e. in 2D architecture.</p>
+                    </div>
+                    <ul>
+                        <li>Quantum Comp</li>
+                        <li>Algorithm</li>
+                        <li>Linear Algebra</li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+
+    
+
+            <div class="project2">
+                <img src="images/webpage.png" alt="Project Image">
+                <div class="project2-content">
+                    <h2>Self-built Webpage</h2>
+                    <div class = "project2-description">
+                        <p>After having a 10-day Hackathon on JavaScript/CSS/HTML, I decided to
+                            practice these skills by building my customized personal page.
+                        </p>
+                        <p>
+                            The layout of this webpage is inspired by Brittany's design.
+                        </p>
+                    </div>
+                    <ul>
+                        <li>JavaScript</li>
+                        <li>CSS</li>
+                        <li>HTML</li>
+                        <li>Git</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project3">
+                <img src="images/migration.png" alt="Project Image">
+                <div class="project3-content">
+                    <h2>Geospatial Heatmaps</h2>
+                    <div class = "project3-description">
+                        <p>A series of visualizations of the correlation between geospatial data with provincial migration statistics. </p>
+                        <p>A third factor, year trend, is then incorporated by making the heapmap interactive.</p>
+                    </div>
+                    <ul>
+                        <li>ggplot</li>
+                        <li>R Shiny</li>
+                        <li>Excel</li>
+                        <li></li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="project4">
+                <img src="images/stats.png" alt="Project Image">
+                <div class="project4-content">
+                    <h2>Predictive Model Training</h2>
+                    <div class = "project4-description">
+                        <p>A Kaggle Competition project on house pricing where we performed exploratory data analysis (EDA) on a large-scale dataset and chose applicable models.</p>
+                        <p>Based on the performances of various predictive models, we gave a report on </p>
+                    </div>
+                    <ul>
+                        <li>VS Code</li>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>JavaScript</li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+
+        
+            
+
+            
+
+            
+
+        <section class="contact-section">
+            <div class="container">
+                <h4>04. What's Next?</h4>
+                <h1>Get In Touch</h1>
+                <p>I am graduating this summer and am actively looking for opportunities.</p>
+                <a href="mailto:ranranfilm@gmail.com" class="say-hello-btn">Contact Me</a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <a href="mailto:xinranliu@reed.edu" class="built">Built by Xinran Liu.</a>
+        <a href="mailto:xinranliu@reed.edu" class="credit">Athethatics inspired by Brittany Chang.</a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
